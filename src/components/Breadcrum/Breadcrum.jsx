@@ -2,7 +2,6 @@ import React from 'react';
 import './Breadcrum.css'
 import arrow_icon from '../assets1/breadcrum_arrow.png'
 const Breadcrum = (props) => {
-    console.log('hiiiiii');
     const{product}=props;
     return (
         <div className='breadcrum'>
