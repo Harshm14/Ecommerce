@@ -1,29 +1,40 @@
-.shopcategory-banner{
+/* Shop Category Banner */
+.shopcategory-banner {
     display: block;
     margin: 30px auto;
-    width: 82% ;
+    width: 82%;
 }
-.shopcategory-indexSort{
+
+/* Shop Category Index and Sort */
+.shopcategory-indexSort {
     display: flex;
-    margin: 0px 170px;
+    margin: 0 170px;
     justify-content: space-between;
     align-items: center;
 }
-.shopcategory-sort{
+
+/* Shop Category Sort */
+.shopcategory-sort {
     padding: 10px 20px;
-    border-radius:  40px;
+    border-radius: 40px;
     border: 1px solid #888;
 }
-.shopcategory-indexSort p span{
+
+/* Shop Category Index Sort Text */
+.shopcategory-indexSort p span {
     font-weight: 600;
 }
-.shopcategory-products{
+
+/* Shop Category Products */
+.shopcategory-products {
     margin: 20px 170px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 80px;
 }
-.shopcategory-loadmore{
+
+/* Shop Category Load More */
+.shopcategory-loadmore {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +43,60 @@
     height: 69px;
     border-radius: 75px;
     background-color: #ededed;
-    color: 787878;
+    color: #787878;
     font-size: 18px;
     font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .shopcategory-indexSort {
+        margin: 0 100px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 100px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .shopcategory-indexSort {
+        margin: 0 50px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .shopcategory-indexSort {
+        flex-direction: column;
+        margin: 0 30px;
+        gap: 20px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .shopcategory-sort {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopcategory-banner {
+        width: 90%;
+    }
+
+    .shopcategory-loadmore {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
 }
